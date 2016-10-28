@@ -1,0 +1,81 @@
+<div class="well">
+	<form class="form-horizontal" ng-submit="updateDoctor()">
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="first_name">First Name:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="first_name" ng-model = "doctor.first_name">
+			</div>
+			<span class="col-sm-6 error" ng-if="errors.first_name">*{{ errors.first_name }}</span>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="middle_name">Middle Name:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="middle_name" ng-model = "doctor.middle_name">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="last_name">Last Name:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="last_name" ng-model = "doctor.last_name">
+			</div>
+			<span class="col-sm-6 error" ng-if="errors.last_name">*{{ errors.last_name }}</span>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="sex">Sex:</label>
+			<div class="col-sm-4">
+				<select class="form-control" name="sex" ng-model = "doctor.sex">
+					<option>Male</option>
+					<option>Female</option>
+				</select>
+			</div>
+			<span class="col-sm-6 error" ng-if="errors.sex">*{{ errors.sex }}</span>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="date_of_birth">Birthday:</label>
+			<div class="col-sm-4">
+				<input type="date" class="form-control" name="date_of_birth" ng-model = "doctor.date_of_birth">
+			</div>
+			<span class="col-sm-6 error" ng-if="errors.date_of_birth">*{{ errors.date_of_birth }}</span>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="mobile">Mobile:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="mobile" ng-model = "doctor.mobile">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="type">Type:</label>
+			<div class="col-sm-4">
+				<select class="form-control" name="type" ng-model = "doctor.type">
+					<option>Doctor</option>
+					<option>Nurse</option>
+				</select>
+			</div>
+			<span class="col-sm-6 error" ng-if="errors.type">*{{ errors.type }}</span>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="registration">Registration Link:</label>
+			<div class="col-sm-4">
+				<textarea class="form-control" rows="5" name="registration" ng-model = "doctor.registration"></textarea>
+			</div>
+			<span class="col-sm-6 error" ng-if="errors.registration">*{{ errors.registration }}</span>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="address">Address:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="address" ng-model = "doctor.address">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="care_city">Preferred city:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" name="care_city" ng-model = "doctor.care_city">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-6">
+				<button type="submit" class="btn btn-info">Update</button>
+			</div>
+		</div>
+	</form>
+</div>

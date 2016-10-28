@@ -1,0 +1,29 @@
+<div class="well">
+	<input type="text" class="form-control" placeholder="Filter: Birthday!" ng-model="search.date_of_birth">
+	<table class="table table-hover table-bordered table-striped">
+		<thead>
+			<tr>
+				<th ng-click="sortBy('first_name')">Name</th>
+				<th ng-click="sortBy('sex')">Sex</th>
+				<th ng-click="sortBy('date_of_birth')">Birthday</th>
+				<th ng-click="sortBy('email')">Email</th>
+				<th>Show</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="doctor in doctors | filter:search | orderBy:propertyName:reverse">
+				<td>{{ doctor.first_name + " " + doctor.last_name }}</td>
+				<td>{{ doctor.sex }}</td>
+				<td>{{ doctor.date_of_birth | date:"MMMM dd, yyyy" }}</td>
+				<td>{{ doctor.email }}</td>
+				<td><a href="doctors/show/{{doctor.id}}" class="btn btn-info">show</a></td>
+				<td><a href="doctors/edit/{{doctor.id}}" class="btn btn-info">edit</a></td>
+				<td><a class="btn btn-info" ng-click="deleteUser(doctor.id)">delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+		
+	<a href="" class="btn btn-info" ng-click="logoutDoctor()">Doctor Logout</a>
+</div>

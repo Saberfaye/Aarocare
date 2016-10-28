@@ -1,0 +1,20 @@
+<div class="well">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Sex</th>
+				<th>Birthday</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ doctor.first_name + " " + doctor.last_name }}</td>
+				<td>{{ doctor.sex }}</td>
+				<td>{{ doctor.date_of_birth | date:"MMMM dd, yyyy" }}</td>
+				<td>{{ doctor.email }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
